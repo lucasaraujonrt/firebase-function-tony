@@ -2,7 +2,13 @@ const functions = require('firebase-functions');
 const FirebaseAdmin = require('firebase-admin');
 const Path = require('path');
 const axios = require('axios');
-const api = axios.default.create({baseURL: 'http://beb949dd6661.ngrok.io'});
+const api = axios.default.create({
+  baseURL: 'http://beb949dd6661.ngrok.io', 
+    headers:{
+      'Content-Type':'application/json',
+      Authorization: 'Baerer 8fc4adb3-3f0f-4aad-8476-178235dee056'
+    }}
+  );
 
 const TonyId = "b910190c-6654-421b-9ff6-674ea8c41174";
 
